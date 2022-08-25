@@ -29,6 +29,7 @@ int square_equasion_solve(double a, double b, double c, double* x1, double* x2)
 
     if (equal(a, 0.0))
     {
+        ASSERT(isfinite(a));
         return solve_linear(b, c, x1);
     }
     else
