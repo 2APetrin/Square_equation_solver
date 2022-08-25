@@ -6,7 +6,9 @@ double getdouble(void)
 
     while (scanf("%lf", &num) != 1)
     {
-        scanf("%*s");
+        while (getchar() != '\n')
+            continue;
+
         printf("This is not a number, try again\n");
     }
 
@@ -15,9 +17,9 @@ double getdouble(void)
 
 int square_equasion_solve(double a, double b, double c, double* x1, double* x2)
 {
-    assert(isfinite(a));
-    assert(isfinite(b));
-    assert(isfinite(c));
+    ASSERT(isfinite(a));
+    ASSERT(isfinite(b));
+    ASSERT(isfinite(c));
 
     assert(x1 != NULL);
     assert(x2 != NULL);
@@ -83,7 +85,8 @@ void print_solvings(int num, double x1, double x2)
         case SS_INF: printf("Any real number fits\n");
                 break;
 
-        default: break;
+        default: printf("Error: default case in switch\n");
+                break;
     }
     printf("-----------------------------------------\n");
 }
@@ -116,11 +119,11 @@ int solve_linear(double b, double c, double* x1)
     return num;
 }
 
-void debug(void)
+void sq_eq_test(void)
 {
     double a = NAN, b = NAN, c = NAN, x1 = NAN, x2 = NAN, px1 = NAN, px2 = NAN;
     int i = 0, num = 0;
-    FILE *fp;
+    FILE *fp = NULL;
 
     if ((fp = fopen("tests.txt", "r")) != NULL)
     {
@@ -164,6 +167,10 @@ void debug(void)
 
 void getabc(double* a, double* b, double* c)
 {
+    assert(a != NULL);
+    assert(b != NULL);
+    assert(c != NULL);
+
     printf("Enter a\n");
     *a = getdouble();
 
@@ -172,4 +179,26 @@ void getabc(double* a, double* b, double* c)
 
     printf("Enter c\n");
     *c = getdouble();
+}
+
+void greeting(void)
+{
+    printf("# Square equation solver\n");
+    printf("# Petrin.aa 2022\n\n");
+
+    printf("You have: a*X^2 + b*X + c = 0\n");
+    printf("To quit type q, to stay type c\n");
+}
+
+void flag_check(int argc, char* argv[])
+{
+    for (int i = 0; i < argc; i++)
+    {
+        if (!(strcmp(*(argv + i), "-h")))
+        {
+            printf("\n-----------------------------------------\n");
+            printf("Path to programm = %s\n", argv[0]);
+            printf("-----------------------------------------\n\n");
+        }
+    }
 }

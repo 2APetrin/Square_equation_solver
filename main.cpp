@@ -2,24 +2,26 @@
 
 int main(int argc, char *argv[])
 {
+    flag_check(argc, argv);
+
     //#define DEBUG
     #ifdef DEBUG
 
-    debug();
+    sq_eq_test();
 
     #endif
     #ifndef DEBUG
 
-    int num = 0, ch = 'q';
-    double a = NAN, b = NAN, c = NAN, x1 = NAN, x2 = NAN;
+    int num = 0;
+    int ch = 'q';
 
+    double a =  NAN;
+    double b =  NAN;
+    double c =  NAN;
+    double x1 = NAN;
+    double x2 = NAN;
 
-
-    printf("# Square equation solver\n");
-    printf("# Petrin.aa 2022\n\n");
-
-    printf("You have: a*X^2 + b*X + c = 0\n");
-    printf("To quit type q, to stay type c\n");
+    greeting();
 
     while ((ch = getchar()) != 'q')
     {
