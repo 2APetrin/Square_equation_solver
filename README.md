@@ -31,7 +31,7 @@ in txt file it looks like<br>
 1 0 -1 2 -1 1<br>
 0 1 1 1 -1<br>
 0 0 0 -1<br>
-## Довольное лицо разработчика
+## Happy developer
 <details>
 
 ![photo_2022-08-26_14-56-50](https://user-images.githubusercontent.com/75694757/186898391-8aa914f7-9142-4084-b01a-dc7f588d44dc.jpg)
