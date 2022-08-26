@@ -29,7 +29,8 @@ You can make your own test for programm. You should make a new line in tests.txt
 in txt file it looks like<br>
 1 5 4 2 -4 -1<br>
 1 0 -1 2 -1 1<br>
-etc
+0 1 1 1 -1<br>
+0 0 0 -1<br>
 ## Довольное лицо разработчика
 <details>
 
