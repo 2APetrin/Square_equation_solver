@@ -15,7 +15,7 @@ double getdouble(void)
     return num;
 }
 
-int square_equasion_solve(double a, double b, double c, double* x1, double* x2)
+int square_equation_solve(double a, double b, double c, double* x1, double* x2)
 {
     ASSERT(isfinite(a));
     ASSERT(isfinite(b));
@@ -130,7 +130,7 @@ void sq_eq_test(void)
     {
         while (fscanf(fp, "%lf %lf %lf %d", &a, &b, &c, &num) == 4)
         {
-            if (num == square_equasion_solve(a, b, c, &x1, &x2))
+            if (num == square_equation_solve(a, b, c, &x1, &x2))
             {
                 if (num == ZEROROOTS or num == SS_INF)
                     printf("Test %d passed\n", ++i);

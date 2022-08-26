@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         {
             getabc(&a, &b, &c);
 
-            num = square_equasion_solve(a, b, c, &x1, &x2);
+            num = square_equation_solve(a, b, c, &x1, &x2);
 
             print_solvings(num, x1, x2);
 
