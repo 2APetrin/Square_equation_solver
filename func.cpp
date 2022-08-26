@@ -161,6 +161,7 @@ void sq_eq_test(void)
             while (getc(fp) != '\n')
                 continue;
         }
+        fclose(fp);
     }
     printf("Number of tests = %d\n", i);
     getchar();

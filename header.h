@@ -1,3 +1,6 @@
+//! @file
+//! @brief All documentation is here
+
 #ifndef HEADER_H_INCLUDED
 #define HEADER_H_INCLUDED
 
@@ -28,10 +31,10 @@ if (!(cond))                                                       \
 
 enum nRoots
 {
-    ZEROROOTS = 0,
-    ONEROOT   = 1,
-    TWOROOTS  = 2,
-    SS_INF    = -1
+    ZEROROOTS = 0,  ///<  0
+    ONEROOT   = 1,  ///<  1
+    TWOROOTS  = 2,  ///<  2
+    SS_INF    = -1  ///< -1
 };
 
 
@@ -58,7 +61,7 @@ double getdouble(void);
 //! @return Amount of roots
 //!
 //! @note   Function checks if input parameters a, b, c are finite and
-//!         and for pointers x1 and x2 if they are not NULL
+//! @note   and for pointers x1 and x2 if they are not NULL
 
 int square_equation_solve(double a, double b, double c, double* x1, double* x2);
 
@@ -101,10 +104,10 @@ int solve_linear(double b, double c, double* x1);
 //!
 //! @note Uncomment #define DEBUG to activate debug mode, where it is working
 //! @note Unit tests are located in tests.txt
-//!       Example of test: 1 5 4  2 -4 -1 where a = 1, b = 5, c = 4, number of roots = 2, -4 - first root, -1 - second root
-//!                        1 2 1  1 -1    where a = 1, b = 2, c = 1, number of roots = 1, -1 - first root
-//!                        1 4 5  0       where a = 1, b = 4, c = 5, number of roots = 0
-//!                        0 0 0 -1       where a = 0, b = 0, c = 0, number of roots = -1 (SS_INF)
+//! @note Example of test: 1 5 4  2 -4 -1 where a = 1, b = 5, c = 4, number of roots = 2, -4 - first root, -1 - second root
+//! @note                  1 2 1  1 -1    where a = 1, b = 2, c = 1, number of roots = 1, -1 - first root
+//! @note                  1 4 5  0       where a = 1, b = 4, c = 5, number of roots = 0
+//! @note                  0 0 0 -1       where a = 0, b = 0, c = 0, number of roots = -1 (SS_INF)
 
 void sq_eq_test(void);
 
